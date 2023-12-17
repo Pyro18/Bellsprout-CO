@@ -1,7 +1,10 @@
 {
-  "functions": {
-    "**/*.php": {
-      "runtime": "vercel-php@0.6.0"
-    }
+  "build": {
+    "target": "php",
+    "ignore": [".git", "node_modules", "public"],
+    "include": ["Bellsprout-CO/**/*.php"]
+  },
+  "pages": {
+    "index": "Bellsprout-CO/frontend/index.php"
   }
 }
