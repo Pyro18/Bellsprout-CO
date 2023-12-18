@@ -1,7 +1,7 @@
 <?php
 
 global $conn;
-include('D:\.Scuola\Informatica\Bellsprout&CO\backend\config\db.php');
+include('D:\.Scuola\Informatica\Bellsprout-CO\backend\config\db.php');
 
 $query_shop_count = "SELECT COUNT(*) as total_shops FROM shop";
 $query_plant_count = "SELECT COUNT(*) as total_plants FROM plant";

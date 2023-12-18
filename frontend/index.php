@@ -22,8 +22,7 @@
         if ($loggedIn){
           echo '<li class="dropdown">';
           echo '<div class="div-dropdown">';
-          echo '<select onchange="location = this.value;">';
-          echo '<option value="#" selected>User Menu</option>';
+          echo '<select onchange="location = this.value;">' ;
           echo '<option value="./dashboard/dashboard.php">Dashboard</option>';
           echo '<option value="#">Profile</option>';
           echo '<option value="./login/logout.php">Logout</option>';
@@ -42,7 +41,7 @@
   <h1>Welcome to Bellsprout&CO</h1>
 
   <div class="search-container">
-      <form action="/frontend/search/search.php" method="GET">
+      <form method="GET" action="/frontend/search/search.php">
           <input type="text" placeholder="Search..." name="query">
           <button type="submit"><i class="fas fa-search"></i></button>
       </form>
