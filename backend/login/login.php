@@ -6,9 +6,12 @@ include('../config/db.php');
 
 $username = $_POST['username'];
 $password = $_POST['password'];
+
 $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
 
 try {
+
+    // da cambiare e mettere la query in prepare per motivi di sicurezza (SQL injection)
     $res = $conn->query($sql);
 
     if($res->rowCount() > 0){

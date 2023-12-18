@@ -23,6 +23,7 @@
           echo '<li class="dropdown">';
           echo '<div class="div-dropdown">';
           echo '<select onchange="location = this.value;">' ;
+          echo '<option selected disabled><i class="fa-solid fa-user" style="color: #ffffff;"></i>User</option>'; // Added icon here
           echo '<option value="./dashboard/dashboard.php">Dashboard</option>';
           echo '<option value="#">Profile</option>';
           echo '<option value="./login/logout.php">Logout</option>';
@@ -46,10 +47,10 @@
           <button type="submit"><i class="fas fa-search"></i></button>
       </form>
 
+
       <!-- credo di dover usare ajax per far vedere il risultato delle query qua  -->
       <!-- TODO: USARE AJAX PER VEDERE LE QUERY NELL' INDEX -->
   </div>
-
 
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
 </body>
