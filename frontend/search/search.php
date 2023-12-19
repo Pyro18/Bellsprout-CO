@@ -6,75 +6,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b647a6c85b.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="frontend\assets\img\logo.jpeg"> 
     <link rel="stylesheet" href="/frontend/assets/css/style.css">
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-
-        .result {
-            border: 1px solid #ccc;
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .result h2 {
-            margin-top: 0;
-            color: #333;
-        }
-
-        .result p {
-            margin-bottom: 0;
-            color: #666;
-        }
-
-        form {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        form label {
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        form select {
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="/frontend/assets/css/search_style.css">
 
     <title>Bellsprout&CO | HOME</title>
 </head>
 <body class="fadeIn">
 <nav class="navbar">
     <ul class="nav-list">
-        <li><a href="#">Query</a></li>
-        <li><a href="#">Join</a></li>
-        <li><a href="#">Group By</a></li>
 
+        <li><a href="/frontend/index.php">HOME</a></li>
+        <div class="search-container">
+        <form method="GET" action="/frontend/search/search.php">
+            <input type="text" placeholder="Search..." name="query">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
         <?php
         $loggedIn = isset($_SESSION['userId']);
         if ($loggedIn) {
             echo '<li class="dropdown">';
             echo '<div class="div-dropdown">';
             echo '<select onchange="location = this.value;">';
-            echo '<option selected disabled><i class="fa-solid fa-user" style="color: #ffffff;"></i>User</option>'; // Added icon here
+            echo '<option selected disabled><i class="fa-solid fa-user" style="color: #ffffff;"></i>User</option>';
             echo '<option value="./dashboard/dashboard.php">Dashboard</option>';
             echo '<option value="#">Profile</option>';
-            echo '<option value="./login/logout.php">Logout</option>';
+            echo '<option value=".\login\logout.php">Logout</option>';
             echo '</select>';
             echo '</div>';
             echo '</li>';
@@ -92,7 +50,7 @@
     <?php
     global $conn;
 
-    include('D:\.Scuola\Informatica\Bellsprout-CO\backend\config\db.php');
+    include('..\..\backend\config\db.php');
 
     if ($_SERVER && isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['query'])) {
         $userInput = $_GET['query'];
@@ -140,12 +98,12 @@
     ?>
 </div>
 
-<form method="GET" action="./search.php">
-    <input type="hidden" name="query"
-           <!-- best practice per la sicurezza di quando si stampa un determinato contenuto in un valore html
-           in questo caso mi assicuro che il valore dell'input utente ```($_GET['query'])``` sia correttamente controllato
-           prima di essere inserito nell'HTML. (mi evito un XSS) -->
-        value="<?php echo isset($_GET['query']) ? htmlspecialchars($_GET['query']) : ''; ?>">
+
+<form class="orderForm" method="GET" action="/frontend/search/search.php">
+        <!-- htmlspecialchars= best practice per la sicurezza di quando si stampa un determinato contenuto in un valore html
+        in questo caso mi assicuro che il valore dell'input utente ```($_GET['query'])``` sia correttamente controllato
+        prima di essere inserito nell'HTML. (mi evito un XSS) -->
+    <input type="hidden" name="query" value="<?php echo isset($_GET['query']) ? htmlspecialchars($_GET['query']) : ''; ?>">
     <label for="order">Order by:</label>
     <select name="order" id="order" onchange="this.form.submit()">
         <option value="t.common_name" <?php echo (isset($_GET['order']) && $_GET['order'] == 't.common_name') ? 'selected' : ''; ?>>
@@ -159,7 +117,6 @@
         </option>
     </select>
 </form>
-
 
 </body>
 </html>

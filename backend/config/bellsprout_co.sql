@@ -1,7 +1,31 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Creato il: Dic 19, 2023 alle 20:43
+-- Versione del server: 10.4.32-MariaDB
+-- Versione PHP: 8.2.12
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `bellsprout&co`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `characteristic`
+--
 
 CREATE TABLE `characteristic` (
   `characteristic_id` int(11) NOT NULL,
@@ -25,7 +49,7 @@ INSERT INTO `characteristic` (`characteristic_id`, `fat`, `type`, `watering`, `f
 (3, 0, 'Sempreverde', 3, 1, 'Bassa', 'Tutto l\'anno', 'Mezza luce solare', 'Fiori profumati'),
 (4, 1, 'Annuale', 2, 0, 'Alta', 'Primavera', 'Piena luce solare', 'Leggermente profumata'),
 (5, 0, 'Perenne', 1, 1, 'Moderata', 'Tutto l\'anno', 'Luce solare diretta', 'Neutro'),
-(6, 1, 'Succulenta', 3, 0, 'Bassa', 'Inverno', 'Mezza luce solare', 'Fiori profumati'),
+(6, 1, 'Succulenta', 3, 0, 'Bassa', 'Inverno', 'Mezza luce solare', 'Neutro'),
 (7, 0, 'Sempreverde', 2, 1, 'Alta', 'Primavera-Estate', 'Piena luce solare', 'Leggermente profumata'),
 (8, 1, 'Annuale', 1, 0, 'Moderata', 'Tutto l\'anno', 'Luce solare diretta', 'Neutro'),
 (9, 0, 'Perenne', 3, 1, 'Bassa', 'Tutto l\'anno', 'Mezza luce solare', 'Fiori profumati'),
@@ -131,15 +155,15 @@ CREATE TABLE `plant` (
 
 INSERT INTO `plant` (`plant_id`, `height`, `color`, `price`, `characteristic_id`, `type_id`) VALUES
 (1, 50, 'Rosso', 20.99, 1, 1),
-(2, 30, 'Verde', 15.50, 2, 2),
-(3, 80, 'Bianco', 30.75, 3, 3),
+(2, 30, 'Giallo', 15.50, 2, 2),
+(3, 80, 'Viola', 30.75, 3, 3),
 (4, 40, 'Giallo', 18.00, 1, 4),
-(5, 60, 'Viola', 25.50, 2, 5),
-(6, 35, 'Blu', 12.99, 3, 6),
-(7, 70, 'Arancione', 22.75, 1, 7),
-(8, 45, 'Marrone', 14.50, 2, 8),
-(9, 55, 'Rosa', 28.00, 3, 9),
-(10, 75, 'Nero', 32.99, 1, 10);
+(5, 60, 'Verde', 25.50, 2, 5),
+(6, 35, 'Verde', 12.99, 3, 6),
+(7, 70, 'Rosa', 22.75, 1, 7),
+(8, 45, 'Rosso', 14.50, 2, 8),
+(9, 55, 'Verde', 28.00, 3, 9),
+(10, 75, 'Arancione', 32.99, 1, 10);
 
 -- --------------------------------------------------------
 
@@ -369,3 +393,7 @@ ALTER TABLE `shop_plant`
   ADD CONSTRAINT `shop_plant_ibfk_1` FOREIGN KEY (`shop_id`) REFERENCES `shop` (`shop_id`),
   ADD CONSTRAINT `shop_plant_ibfk_2` FOREIGN KEY (`plant_id`) REFERENCES `plant` (`plant_id`);
 COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

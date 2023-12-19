@@ -1,7 +1,7 @@
 <?php
 
 global $conn;
-include('D:\.Scuola\Informatica\Bellsprout-CO\backend\config\db.php');
+include('..\..\backend\config\db.php');
 
 $query_shop_count = "SELECT COUNT(*) as total_shops FROM shop";
 $query_plant_count = "SELECT COUNT(*) as total_plants FROM plant";
@@ -37,7 +37,7 @@ try {
 </head>
 <body class="fadeIn-dashboard">
 <nav>
-     <ul>
+    <ul>
         <li><a href="/frontend/index.php">Home Page</a></li>
         <li><i class="fa-solid fa-user" href="/frontend/login/login_form.php"></i></li>
     </ul>
