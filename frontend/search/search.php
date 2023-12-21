@@ -49,7 +49,6 @@
 <div class="search-results">
     <?php
     global $conn;
-
     include('..\..\backend\config\db.php');
 
     if ($_SERVER && isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['query'])) {
@@ -94,7 +93,6 @@
             die("Error: " . $e->getMessage());
         }
     }
-
     ?>
 </div>
 

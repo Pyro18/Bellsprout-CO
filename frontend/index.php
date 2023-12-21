@@ -50,21 +50,9 @@ session_start();
 <?php
 include('D:\.Scuola\Informatica\Bellsprout-CO\backend\config\db.php');
 
-$query = "SELECT
-    t.scientific_name,
-    t.common_name,
-    p.color,
-    c.type,
-    c.disease_resistance,
-    c.seasonality,
-    c.sunlight_exposure,
-    c.fragrance
-FROM
-    plant p
-INNER JOIN
-    type t ON p.type_id = t.type_id
-INNER JOIN
-    characteristic c ON p.characteristic_id = c.characteristic_id";
+$query = "SELECT p.image, t.scientific_name, t.common_name, p.price
+          FROM plant p INNER JOIN
+          type t ON p.type_id = t.type_id";
 
 try {
     $stmt = $conn->query($query);
@@ -78,20 +66,15 @@ echo '<div class="plant-container">';
 
 foreach ($result as $row) {
     echo '<div class="plant">';
-    echo "<p><strong>Scientific Name:</strong> {$row['scientific_name']}</p>";
-    echo "<p><strong>Common Name:</strong> {$row['common_name']}</p>";
-    echo "<p><strong>Color:</strong> {$row['color']}</p>";
-    echo "<p><strong>Type:</strong> {$row['type']}</p>";
-    echo "<p><strong>Disease Resistance:</strong> {$row['disease_resistance']}</p>";
-    echo "<p><strong>Seasonality:</strong> {$row['seasonality']}</p>";
-    echo "<p><strong>Sunlight Exposure:</strong> {$row['sunlight_exposure']}</p>";
-    echo "<p><strong>Fragrance:</strong> {$row['fragrance']}</p>";
+    echo '<img src="'. $row['image']. '" alt="plant" width=auto height=100>';
+    echo "<p><strong>Nome Scientifico:</strong> {$row['scientific_name']}</p>";
+    echo "<p><strong>Nome Comune:</strong> {$row['common_name']}</p>";
+    echo "<p><strong>Prezzo:</strong> {$row['price']} $</p>";
     echo '</div>';
 }
 
 echo '</div>';
 ?>
-
 
 
 </body>

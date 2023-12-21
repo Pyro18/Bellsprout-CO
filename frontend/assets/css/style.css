@@ -64,7 +64,6 @@ body {
   border-radius: 20px;
 }
 
-
 .search-container button {
   position: absolute;
   right: 5px;
@@ -81,6 +80,7 @@ body {
 .plant-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .plant {
@@ -90,7 +90,7 @@ body {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: calc(25% - 40px); /* Adjust the width based on your preference, considering margin */
+  width: calc(25% - 40px);
   box-sizing: border-box;
 }
 
@@ -103,6 +103,4 @@ body {
   margin-bottom: 0;
   color: #666;
 }
-
-
 
