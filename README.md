@@ -5,9 +5,9 @@ Site for a school assignments for managing a chain of plant stores
 - [x] where
 - [x] inner join
 - [x] left join
-- [ ] right join
+- [x] right join
 - [x] group by
-- [ ] having
+- [x] having
 - [ ] distinct
 
 # LINK UTULI CHE HO USATO PER COMPLETARE IL SITO

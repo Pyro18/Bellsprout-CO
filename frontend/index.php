@@ -20,13 +20,16 @@ session_start();
     <div class="search-container">
       
       <form method="GET" action="/frontend/search/search.php">
-          <input type="text" placeholder="Search..." name="query">
+          <label>
+              <input type="text" placeholder="Search..." name="query">
+          </label>
           <button type="submit"><i class="fas fa-search"></i></button>
       </form>
     </div>
       <?php
         $loggedIn = isset($_SESSION['userId']);
         if ($loggedIn){
+          echo '<li><a href="dashboard\dashboard.php">DASHBOARD</a></li>';
           echo '<li class="dropdown">';
           echo '<div class="div-dropdown">';
           echo '<select onchange="location = this.value;">' ;

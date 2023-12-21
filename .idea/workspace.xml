@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de31e683-026f-4cee-8bf6-e66d656f5274" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/assets/css/shop_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/shop/plant_management.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/shop/store_management.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/659dca83-9d57-4e80-9999-82aab22f5803.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/659dca83-9d57-4e80-9999-82aab22f5803.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/bellsprout_co.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/bellsprout_co.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dashboard/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dashboard/dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/search/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/search/search.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +22,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,6 +51,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,6 +83,7 @@
       <workItem from="1703014579160" duration="605000" />
       <workItem from="1703087225654" duration="110000" />
       <workItem from="1703087580068" duration="2939000" />
+      <workItem from="1703170944030" duration="2542000" />
     </task>
     <servers />
   </component>

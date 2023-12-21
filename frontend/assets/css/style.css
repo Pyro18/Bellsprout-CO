@@ -104,3 +104,20 @@ body {
   color: #666;
 }
 
+.dashboard {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.dashboard p {
+  margin-bottom: 10px;
+  color: #666;
+}
