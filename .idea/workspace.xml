@@ -50,6 +50,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -84,6 +85,7 @@
       <workItem from="1703087225654" duration="110000" />
       <workItem from="1703087580068" duration="2939000" />
       <workItem from="1703170944030" duration="2542000" />
+      <workItem from="1703231566983" duration="33000" />
     </task>
     <servers />
   </component>

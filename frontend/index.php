@@ -35,7 +35,8 @@ session_start();
           echo '<select onchange="location = this.value;">' ;
           echo '<option selected disabled><i class="fa-solid fa-user" style="color: #ffffff;"></i>User</option>';
           echo '<option value="./dashboard/dashboard.php">Dashboard</option>';
-          echo '<option value="#">Profile</option>';
+          echo '<option value="../../frontend/shop/store_management.php">Gestione Negozi</option>';
+          echo '<option value="../../frontend/shop/plant_management.php">Gestione Piante</option>';
           echo '<option value=".\login\logout.php">Logout</option>';
           echo '</select>';
           echo '</div>';
@@ -51,7 +52,7 @@ session_start();
   </nav>
 
 <?php
-include('D:\.Scuola\Informatica\Bellsprout-CO\backend\config\db.php');
+include('../../Bellsprout-CO/backend/config/db.php');
 
 $query = "SELECT p.image, t.scientific_name, t.common_name, p.price
           FROM plant p INNER JOIN

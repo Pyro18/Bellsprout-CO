@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$dbname = "bellsprout&co";
+$dbname = "bellsprout_co";
 $username = "root";
 $password = "";
 

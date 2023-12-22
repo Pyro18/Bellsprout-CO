@@ -2,7 +2,7 @@
 session_start();
 
 global $conn;
-include('..\..\backend\config\db.php');
+include('../../backend/config/db.php');
 
 $query_shop_count = "SELECT COUNT(*) as total_shops FROM shop";
 $query_plant_count = "SELECT COUNT(*) as total_plants FROM plant";
@@ -75,7 +75,7 @@ try {
         ?>
     </ul>
 </nav>
-<h1 style="padding: 20px margin: 20px">Dashboard</h1>
+<h1 style="padding: 20px">Dashboard</h1>
 <div class="dashboard">
 
     <h2>Informazioni generali</h2>
